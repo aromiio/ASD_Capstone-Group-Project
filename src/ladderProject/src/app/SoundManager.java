@@ -13,7 +13,6 @@ public class SoundManager {
     private static Clip bgmClip;
     private static boolean soundEnabled = true;
 
-    // Sound types
     public static final String BGM = "bgm.wav";
     public static final String MOVE_FORWARD = "move_forward.wav";
     public static final String MOVE_BACKWARD = "move_backward.wav";
@@ -27,14 +26,16 @@ public class SoundManager {
                 return soundCache.get(filename);
             }
 
-            File soundFile = new File("src/sounds/" + filename);
+            var url = SoundManager.class
+                    .getClassLoader()
+                    .getResource("sounds/" + filename);
 
-            if (!soundFile.exists()) {
-                System.err.println("❌ Sound file not found: " + soundFile.getAbsolutePath());
+            if (url == null) {
+                System.err.println("❌ Sound file not found in resources: sounds/" + filename);
                 return null;
             }
 
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(url);
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);
 
