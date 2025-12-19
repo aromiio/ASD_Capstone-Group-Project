@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ASD_Capstone-Group-Project.iml" filepath="$PROJECT_DIR$/.idea/ASD_Capstone-Group-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/graphProject/graphProject.iml" filepath="$PROJECT_DIR$/src/graphProject/graphProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ladderProject/ladderProject.iml" filepath="$PROJECT_DIR$/src/ladderProject/ladderProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/mazeProject/mazeProject.iml" filepath="$PROJECT_DIR$/src/mazeProject/mazeProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
     </modules>
